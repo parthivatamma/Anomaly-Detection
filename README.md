@@ -1,54 +1,30 @@
-# Anomaly-Detection
+# AI-Orchestrated Anomaly Detection Engine
 
-Anomaly Detection using the isolation forest method
-- Create a training dataset and a test dataset using a file creator with random values
-- trained the model using the training dataset
-- tested using the test dataset
+A modernization of a legacy anomaly detection project (circa 2022) into a production-ready diagnostic dashboard. This application uses the **Isolation Forest** method to identify outliers in telemetry data and leverages a **local LLM (Llama 3 via Ollama)** to generate human-readable technical diagnostics for the identified anomalies.
 
-How to run
-- Run AnomalyDetection.py
-Sample output:
-    Overs  Scores
-0       1      15
-1       2      10
-2       3      17
-3       4      10
-4       5      12
-5       6      20
-6       7      12
-7       8       7
-8       9       8
-9      10      11
-10     11      15
-11     12      14
-12     13       3
-13     14      19
-14     15      11
-15     16      13
-16     17      40
-17     18      16
-18     19      26
-19     20      30
-20     21       0
-    Overs  Scores    scores  anomaly
-0       1      29 -0.033180       -1
-1       2      17  0.162398        1
-2       3      13  0.135136        1
-3       4      32 -0.066483       -1
-4       5       7  0.091210        1
-5       6       6  0.027284        1
-6       7      30 -0.041341       -1
-7       8       4 -0.010490       -1
-8       9      26  0.000000        1
-9      10       3 -0.041341       -1
-10     11       9  0.144382        1
-11     12      20  0.080467        1
-12     13      25  0.007618        1
-13     14       4 -0.010490       -1
-14     15       0 -0.092642       -1
-15     16      26  0.000000        1
-16     17      21  0.080467        1
-17     18      11  0.181823        1
-18     19      12  0.171154        1
-19     20      15  0.185300        1
-7
+## 🚀 The Vision: "Legacy to AI"
+
+This project demonstrates the evolution of a data science pipeline—taking raw numerical analysis and wrapping it in a modern, interactive UI with an AI "Analyst" layer. It highlights the transition from static scripts to dynamic, orchestrated systems.
+
+## 🛠️ Tech Stack
+
+- **Language:** Python 3.x
+- **Modeling:** Scikit-Learn (Isolation Forest)
+- **Orchestration:** Ollama (Llama 3)
+- **Visualization:** Plotly, Streamlit
+- **Data Handling:** Pandas, NumPy
+
+## ✨ Key Features
+
+- **Dynamic Parameter Tuning:** Real-time adjustment of 'Contamination' levels and model estimators via the Streamlit sidebar.
+- **Automated Incident Analysis:** When an anomaly is detected, the system extracts the data and queries a local LLM to hypothesize mechanical failure points (e.g., automotive sensor failure or hardware degradation).
+- **Interactive Telemetry:** Full visibility into data distribution and outliers through interactive scatter plots and histograms.
+
+## 🚦 Getting Started
+
+### Prerequisites
+
+1. Install [Ollama](https://ollama.com/) and download the model:
+   ```bash
+   ollama pull llama3
+   ```
